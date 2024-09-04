@@ -4,6 +4,12 @@ const port = 3000;
 
 app.use(express.json()); // Pour parser le JSON dans les requêtes POST et PUT
 
+// Middleware pour logger les headers des requêtes
+app.use((req, res, next) => {
+  console.log('Headers:', req.headers);
+  next();
+});
+
 // Endpoints GET - Accès pour admin, modérateur, utilisateur
 app.get('/quote1', (req, res) => {
   res.json({ message: 'C’est pas faux.' });
@@ -23,7 +29,7 @@ app.put('/quote4', (req, res) => {
 });
 
 app.put('/quote5', (req, res) => {
-  res.json({ message: 'On en a gros !' });
+  res.json({ message: 'Le gars c\'est la vie' });
 });
 
 // Endpoints POST - Accès pour admin uniquement
