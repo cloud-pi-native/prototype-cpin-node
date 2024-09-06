@@ -29,7 +29,7 @@ read_secret:
 docker-build:
   variables:
     WORKING_DIR: "."
-    IMAGE_NAMES: node-kaamelott:${CI_COMMIT_REF_SLUG} node-kaamelott:latest node-kaamelott:0.0.1
+    IMAGE_NAMES: node-prototype:${CI_COMMIT_REF_SLUG} node-kaamelott:latest node-prototype:0.0.1
     TAG: "${CI_COMMIT_REF_SLUG}"
   stage: docker-build
   extends:

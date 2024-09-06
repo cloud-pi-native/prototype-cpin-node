@@ -38,12 +38,12 @@ app.post('/quote6', (req, res) => {
 });
 
 app.post('/quote7', (req, res) => {
-  res.json({ message: 'Au secours !' });
+  res.json({ message: 'La chevalerie, c’est pas là où on range les chevaux ?' });
 });
 
 // Endpoint ouvert à tous
 app.get('/public', (req, res) => {
-  res.json({ message: 'Bienvenue' });
+  res.json({ message: '13, 14, 15 … Enfin, tous les chiffres impairs jusqu’à 22.' });
 });
 
 // Démarrage du serveur
