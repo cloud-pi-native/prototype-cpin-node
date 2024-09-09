@@ -29,7 +29,7 @@ read_secret:
 
 sonar-app:
   variables:
-  stage: sonar-app
+  stage: sonar
   extends:
     - .sonar:sonar-scanner
  
