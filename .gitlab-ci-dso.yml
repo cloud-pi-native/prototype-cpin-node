@@ -20,12 +20,19 @@ variables:
 stages:
   - read-secret
   - docker-build
+  - sonar
 
 read_secret:
   stage: read-secret
   extends:
     - .vault:read_secret
 
+sonar-app:
+  variables:
+  stage: sonar-app
+  extends:
+    - .sonar:sonar-scanner
+ 
 docker-build:
   variables:
     WORKING_DIR: "."
