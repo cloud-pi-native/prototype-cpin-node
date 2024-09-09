@@ -3,6 +3,7 @@ include:
     file:
       - vault-ci.yml
       - kaniko-ci.yml
+      - sonar-ci.yml
     ref: main
 
 default:
