@@ -20,7 +20,7 @@ variables:
 stages:
   - read-secret
   - docker-build
-  - sonar
+  - sonar-app
 
 read_secret:
   stage: read-secret
